@@ -12,7 +12,12 @@ int estadoBotao = 0; //variavel para armazenar o estado
 
 void setup() {
   // put your setup code here, to run once:
-
+  pinMode(pinoBotao,INPUT_PULLUP);//define botao como entrado negativa;
+  radio.begin();//inicia radio
+  radio.openWritingPipe(endereco);//diz qual endereço do sinal está conversando
+  radio.setPALevel(RF24_PA_HIGH);//frequencia alta
+  radio.stopListening();//diz que ele não precisa ouvir só enviar
+  
 }
 
 void loop() {
