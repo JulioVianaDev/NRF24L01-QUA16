@@ -2,6 +2,7 @@
 #include <nRF24L01.h>
 #include <RF24.h>
 
+
 RF24 radio(9,10);//criando o radio
 const byte endereco[6] = "00001"; //cria um endereço 
 //MESMO ENDEREÇO DO SLAVE
